@@ -1,767 +1,1993 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://www.uho.co/Publications/Unpublished/00_Architecture_today/">
+      
+      <link rel="icon" href="../../../assets/fav.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>🔒 Architecture today - 🏝 UHO</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../extra/css/style.css">
+    
+    
+      
 
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://www.uho.co/Publications/Unpublished/00_Architecture_today/" rel="canonical"/>
-<link href="../../../assets/fav.png" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.3.0" name="generator"/>
-<title>🔒 Architecture today - 🏝 UHO</title>
-<link href="../../../assets/stylesheets/main.8b42a75e.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<meta content="#ffffff" name="theme-color"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
-<meta content="🔒 Architecture today" property="og:title">
-<meta content="article" property="og:type">
-<meta content="https://www.uho.co/Publications/Unpublished/00_Architecture_today/" property="og:url">
-<meta content="https://www.uho.co/assets/06_00_2017, Private apartment, Paris.jpg" property="og:image">
-<meta content="UHO is an architecture studio and consultancy founded in 2013." property="og:description"/>
-</meta></meta></meta></meta><link href="../../../assets/stylesheets/extra-style.5iu3hqeh.min.css" rel="stylesheet"/></head>
-<body data-md-color-accent="green" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
-<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#architecture-today">
+
+    
+    
+  <meta property="og:title" content="🔒 Architecture today" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.uho.co/Publications/Unpublished/00_Architecture_today/" />
+  
+  <meta property="og:image" content="https://www.uho.co/assets/06_00_2017, Private apartment, Paris.jpg" />
+  
+
+  
+    <meta property="og:description" content="UHO is an architecture studio and consultancy founded in 2013." />  
+  
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="green">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architecture-today" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
 <header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="🏝 UHO" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="🏝 UHO">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M160 288h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56v-64h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56V96h-56c-4.42 0-8-3.58-8-8V72c0-4.42 3.58-8 8-8h56V32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v448c0 2.77.91 5.24 1.57 7.8L160 329.38V288zm320 64h-32v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-41.37L24.2 510.43c2.56.66 5.04 1.57 7.8 1.57h448c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32z"></path></svg>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="🏝 UHO" class="md-header__button md-logo" aria-label="🏝 UHO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M160 288h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56v-64h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56V96h-56c-4.42 0-8-3.58-8-8V72c0-4.42 3.58-8 8-8h56V32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v448c0 2.77.91 5.24 1.57 7.8L160 329.38V288zm320 64h-32v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-41.37L24.2 510.43c2.56.66 5.04 1.57 7.8 1.57h448c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             🏝 UHO
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               🔒 Architecture today
             
           </span>
-</div>
-</div>
-</div>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
-</label>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
-</button>
-</nav>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</nav>
+    
+    
+  </nav>
+  
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
       UHO
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Case_Studies/2021_00_Vienna_Possibilities_of_space/">
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Case_Studies/2021_00_Vienna_Possibilities_of_space/" class="md-tabs__link">
         Case studies
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Method/010_About_Space/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Method/010_About_Space/" class="md-tabs__link">
         Method
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../Published/The_Beach_is_Boring/">
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Published/The_Beach_is_Boring/" class="md-tabs__link md-tabs__link--active">
         Publications
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Tools/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../Tools/" class="md-tabs__link">
       Tools
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../press/">
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../press/" class="md-tabs__link">
       🔒 Press
     </a>
-</li>
-</ul>
-</div>
+  </li>
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="🏝 UHO" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="🏝 UHO">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M160 288h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56v-64h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56V96h-56c-4.42 0-8-3.58-8-8V72c0-4.42 3.58-8 8-8h56V32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v448c0 2.77.91 5.24 1.57 7.8L160 329.38V288zm320 64h-32v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-41.37L24.2 510.43c2.56.66 5.04 1.57 7.8 1.57h448c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32z"></path></svg>
-</a>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="🏝 UHO" class="md-nav__button md-logo" aria-label="🏝 UHO" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M160 288h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56v-64h-56c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h56V96h-56c-4.42 0-8-3.58-8-8V72c0-4.42 3.58-8 8-8h56V32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v448c0 2.77.91 5.24 1.57 7.8L160 329.38V288zm320 64h-32v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-64v56c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-56h-41.37L24.2 510.43c2.56.66 5.04 1.57 7.8 1.57h448c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32z"/></svg>
+
+    </a>
     🏝 UHO
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         UHO
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
           Case studies
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Case studies" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Case studies" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Case studies
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_Vienna_Possibilities_of_space/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_Vienna_Possibilities_of_space/" class="md-nav__link">
         2021 URB Possibilities of space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_Termoli_Bus_Stops/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_Termoli_Bus_Stops/" class="md-nav__link">
         2021 URB Bus stop
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_No_Staff_Club/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_No_Staff_Club/" class="md-nav__link">
         🔒 2021 APP No Staff Club
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_Istres_Park/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_Istres_Park/" class="md-nav__link">
         🔒 2021 URB Istres
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_Foodblock/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_Foodblock/" class="md-nav__link">
         🔒 2021 ARCH Foodblock
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_Caf%C3%A9_FNM/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_Caf%C3%A9_FNM/" class="md-nav__link">
         🔒 2021 ARCH Café FNM
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_ARPA_Residency_Art_Center/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_ARPA_Residency_Art_Center/" class="md-nav__link">
         🔒 2021 ARCH ARPA ART
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2021_00_ARPA_Housing_Scheme/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2021_00_ARPA_Housing_Scheme/" class="md-nav__link">
         🔒 2021 ARCH ARPA HOUSING
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2019_00_Room_1/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2019_00_Room_1/" class="md-nav__link">
         🔒 2019 EXH Room 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2018_00_Brexit_Monument/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2018_00_Brexit_Monument/" class="md-nav__link">
         🔒 2018 ARCH Brexit Monument
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2017_00_Orgues_de_Flandre/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2017_00_Orgues_de_Flandre/" class="md-nav__link">
         2017 ARCH Orgues
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2017_00_La_Barre/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2017_00_La_Barre/" class="md-nav__link">
         🔒 2017 EXH La Barre
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2015_00_Tirana_Supreme_Court/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2015_00_Tirana_Supreme_Court/" class="md-nav__link">
         🔒 2015 ARCH Supreme Court
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2015_00_Tirana_Student_City/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2015_00_Tirana_Student_City/" class="md-nav__link">
         🔒 2015 URB Student City
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2015_00_Tirana_Park_Entrance/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2015_00_Tirana_Park_Entrance/" class="md-nav__link">
         🔒 2015 URB Park Entrance
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2015_00_Swimming_Pool/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2015_00_Swimming_Pool/" class="md-nav__link">
         🔒 2015 URB Swimming Pool
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2015_00_Marfa/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2015_00_Marfa/" class="md-nav__link">
         2015 ARCH 16 Housing units
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2014_00_Venice_Islands/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2014_00_Venice_Islands/" class="md-nav__link">
         2014 URB Poveglia and Ottagono islands
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2013_00_Le_Terrain/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2013_00_Le_Terrain/" class="md-nav__link">
         2013 EXH Le Terrain
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Case_Studies/2013_00_Don_Benito/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Case_Studies/2013_00_Don_Benito/" class="md-nav__link">
         2013 URB Don Benito
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
           Method
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Method" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Method" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Method
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/010_About_Space/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/010_About_Space/" class="md-nav__link">
         About Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/011_Practical_Methodology/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/011_Practical_Methodology/" class="md-nav__link">
         In Practice
       </a>
-</li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_3">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
           Terminology
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Terminology" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminology" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
           Terminology
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/" class="md-nav__link">
         What is this list?
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Action/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Action/" class="md-nav__link">
         Action
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Architect/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Architect/" class="md-nav__link">
         Architect
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Architecture/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Architecture/" class="md-nav__link">
         Architecture
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Attention/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Attention/" class="md-nav__link">
         🔒 Attention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/C-Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/C-Space/" class="md-nav__link">
         C-Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Capital/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Capital/" class="md-nav__link">
         🔒 Capital
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Commodity/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Commodity/" class="md-nav__link">
         Commodity
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Communism/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Communism/" class="md-nav__link">
         🔒 Communism
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Component/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Component/" class="md-nav__link">
         Component
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Condition/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Condition/" class="md-nav__link">
         Condition
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Conditional/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Conditional/" class="md-nav__link">
         🔒 Conditional
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Conditioned/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Conditioned/" class="md-nav__link">
         🔒 Conditioned
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Context/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Context/" class="md-nav__link">
         Context
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Contract/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Contract/" class="md-nav__link">
         🔒 Contract
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Decommodification/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Decommodification/" class="md-nav__link">
         🔒 Decommodification
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Deontic_Norm/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Deontic_Norm/" class="md-nav__link">
         🔒 Deontic Norm
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Deterministic_path/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Deterministic_path/" class="md-nav__link">
         🔒 Deterministic path
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Dual/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Dual/" class="md-nav__link">
         🔒 Dual
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Evaluation/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Evaluation/" class="md-nav__link">
         🔒 Evaluation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Exchange-Value/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Exchange-Value/" class="md-nav__link">
         🔒 Exchange Value
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Exploitation/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Exploitation/" class="md-nav__link">
         Exploitation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Exploration/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Exploration/" class="md-nav__link">
         Exploration
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Extraction/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Extraction/" class="md-nav__link">
         Extraction
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Fascism/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Fascism/" class="md-nav__link">
         Fascism
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Function/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Function/" class="md-nav__link">
         🔒 Function
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Habit/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Habit/" class="md-nav__link">
         🔒 Habit
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Hack/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Hack/" class="md-nav__link">
         🔒 Hack
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Heroism/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Heroism/" class="md-nav__link">
         🔒 Heroism
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Junkspace/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Junkspace/" class="md-nav__link">
         🔒 Junkspace
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Labor/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Labor/" class="md-nav__link">
         Labor
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Law/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Law/" class="md-nav__link">
         Law
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Map/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Map/" class="md-nav__link">
         Map
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/New_Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/New_Space/" class="md-nav__link">
         🔒 New Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Now/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Now/" class="md-nav__link">
         🔒 Now
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Old_Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Old_Space/" class="md-nav__link">
         🔒 Old Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Optical/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Optical/" class="md-nav__link">
         Optical
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Outcome/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Outcome/" class="md-nav__link">
         Outcome
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/P-Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/P-Space/" class="md-nav__link">
         P-Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Partition/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Partition/" class="md-nav__link">
         Partition
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Perception/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Perception/" class="md-nav__link">
         🔒 Perception
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Plot/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Plot/" class="md-nav__link">
         Plot
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Pressure/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Pressure/" class="md-nav__link">
         🔒 Pressure
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Priority_Stack/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Priority_Stack/" class="md-nav__link">
         Priority Stack
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Profit/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Profit/" class="md-nav__link">
         🔒 Profit
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Project/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Project/" class="md-nav__link">
         Project
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Quality/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Quality/" class="md-nav__link">
         🔒 Quality
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Quantity/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Quantity/" class="md-nav__link">
         🔒 Quantity
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Raw_Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Raw_Space/" class="md-nav__link">
         🔒 Raw Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Real_Estate/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Real_Estate/" class="md-nav__link">
         Real Estate
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Representation/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Representation/" class="md-nav__link">
         🔒 Representation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/S-Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/S-Space/" class="md-nav__link">
         S-Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Sandbox/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Sandbox/" class="md-nav__link">
         🔒 Sandbox
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Site/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Site/" class="md-nav__link">
         🔒 Site
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Space/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Space/" class="md-nav__link">
         Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Space_of_Production/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Space_of_Production/" class="md-nav__link">
         🔒 Space of Production
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Space_of_Reproduction/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Space_of_Reproduction/" class="md-nav__link">
         🔒 Space of Reproduction
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/State/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/State/" class="md-nav__link">
         🔒 State
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Strategy/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Strategy/" class="md-nav__link">
         Strategy
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Tactile/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Tactile/" class="md-nav__link">
         Tactile
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Transaction/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Transaction/" class="md-nav__link">
         🔒 Transaction
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Use-Value/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Use-Value/" class="md-nav__link">
         🔒 Use Value
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Use/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Use/" class="md-nav__link">
         Use
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Value/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Value/" class="md-nav__link">
         🔒 Value
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Method/Terminology/Violence/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Method/Terminology/Violence/" class="md-nav__link">
         🔒 Violence
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
           Publications
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Publications" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Publications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Publications
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
           Published
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Published" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_1">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Published" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
           Published
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/The_Beach_is_Boring/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/The_Beach_is_Boring/" class="md-nav__link">
         🔒 The Beach is Boring
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/Poseur_Real_Estate/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/Poseur_Real_Estate/" class="md-nav__link">
         🔒 Poseur Real Estate
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/Oval_Review/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/Oval_Review/" class="md-nav__link">
         🔒 Oval Review
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/Ecology_Emancipation/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/Ecology_Emancipation/" class="md-nav__link">
         🔒 Ecology Emancipation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/Below_the_Shadows/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/Below_the_Shadows/" class="md-nav__link">
         🔒 Below the Shadows
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/2017_00_Architecture_will_divide_us/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/2017_00_Architecture_will_divide_us/" class="md-nav__link">
         Architecture will divide us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Published/010_Firmament/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Published/010_Firmament/" class="md-nav__link">
         🔒 Firmament
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_2">
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
           Unpublished
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Unpublished" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_2">
-<span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unpublished" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
           Unpublished
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Why%20it%20fails/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why%20it%20fails/" class="md-nav__link">
         🔒 Why it fails
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Satisfactory%20outcome/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Satisfactory%20outcome/" class="md-nav__link">
         🔒 Satisfactory outcome
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Dynamics%20of%20the%20site/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dynamics%20of%20the%20site/" class="md-nav__link">
         🔒 Dynamics of the site
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Architecture_as_a_discipline/">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture_as_a_discipline/" class="md-nav__link">
         🔒 Architecture as a discipline
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         🔒 Architecture today
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Tools/">
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/" class="md-nav__link">
         Tools
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../press/">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../press/" class="md-nav__link">
         🔒 Press
       </a>
-</li>
-</ul>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<div id="mkdocs-encrypted-content" style="display:none">BZYsMrKp4YKws4DcCQAA+g==;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;^</div>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div id="mkdocs-encrypted-content" style="display:none">JYD+KlAkB4rBJmBjkRvxzQ==;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;^</div>
 <div id="mkdocs-decrypted-content">
-<form id="mkdocs-decrypt-form">
-<h1>🔒 This content will be unlocked in the future.</h1>
-<p>Page protected with AES encryption.</p>
-<input id="mkdocs-content-password" placeholder="Provide password and press ENTER" type="password">
-<p id="mkdocs-decrypt-msg"></p>
-</input></form>
+    <form id="mkdocs-decrypt-form">
+        <h1>🔒 This content will be unlocked in the future.</h1>
+        <p>Page protected with AES encryption.</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+
+
 <script type="text/javascript">
     (function() {
         var strip_padding = function(padded_content, padding_char) {
@@ -857,79 +2083,125 @@
         document.addEventListener('DOMContentLoaded', init_decryptor);
     })();
 </script>
-<hr/>
+                
+                  
+                    
+
+<hr>
 <div class="md-source-date">
-<small>
+  <small>
     
       Last update: 2021-10-11
     
   </small>
 </div>
-</article>
-</div>
-</div>
-</main>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 🔒 Architecture as a discipline" class="md-footer__link md-footer__link--prev" href="../Architecture_as_a_discipline/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Architecture_as_a_discipline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🔒 Architecture as a discipline" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
                 Previous
               </span>
               🔒 Architecture as a discipline
             </div>
-</div>
-</a>
-<a aria-label="Next: Tools" class="md-footer__link md-footer__link--next" href="../../../Tools/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../Tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Tools" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
                 Next
               </span>
               Tools
             </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
-</div>
-</a>
-</nav>
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<div class="md-footer-copyright">
-<div class="md-footer-copyright__highlight">
-            Copyright © 2021 UHO.
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 UHO.
           </div>
         
         
           Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
             Material for MkDocs
           </a>
-</div>
-<div class="md-footer-social">
-<a class="md-footer-social__link" href="https://instagram.com/uho_co" rel="noopener" target="_blank" title="instagram.com">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-</a>
-<a class="md-footer-social__link" href="mailto:&lt;inquiries@uho.co&gt;" rel="noopener" target="_blank" title="">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path></svg>
-</a>
-</div>
-</div>
-</div>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://instagram.com/uho_co" target="_blank" rel="noopener" title="instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="mailto:<inquiries@uho.co>" target="_blank" rel="noopener" title="" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
-<script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
-<script src="../../../extra/js/jquery-3.6.0.min.js"></script>
-<script src="../../../extra/js/jquery.mark.min.js"></script>
-<script src="../../../extra/js/mkdocs-extra.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="../../../extra/js/jquery-3.6.0.min.js"></script>
+      
+        <script src="../../../extra/js/jquery.mark.min.js"></script>
+      
+        <script src="../../../extra/js/mkdocs-extra.js"></script>
+      
+    
+  </body>
 </html>
