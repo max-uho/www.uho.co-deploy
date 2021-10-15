@@ -9,16 +9,19 @@ body {
 	--main-font: "Fira Code";
 	--main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-size-small: 0.7rem;
+	--main-font-size: 20px;
+	--main-font-weight: 400;
 	--max-text-width: 720px;
 	--border-thickness: 0.8px;
+
+	--font-size-small: 0.7rem;
 
 
 	color: var(--text-color) !important;
 	background-color: var(--bg-color);
 	font-family: var(--main-font) !important;
-	font-weight: 400 !important;
-	font-size: 20px !important;
+	font-weight: var(--main-font-weight) !important;
+	font-size: var(--main-font-size) !important;
 }
 
 .md-grid {
@@ -426,7 +429,8 @@ th {
 }
 
 hr{
-	display: none !important;
+	border-bottom: var(--border-thickness) solid var(--text-color)!important;
+	margin: 0.5rem!important;
 }
 
 .md-source-date {
@@ -450,3 +454,34 @@ hr{
 }
 
 */
+
+
+/* SVG stuff */
+svg{
+	display: block;
+}
+
+svg circle, svg path{
+    fill:var(--text-color)!important;
+}
+
+svg circle{
+    r:calc( var(--border-thickness) / 2.0 )
+}
+
+svg text{
+    fill:var(--text-color);
+	font-size:var(--font-size-small)!important;
+	font-family: var(--main-font) !important;
+	font-weight: var(--main-font-weight) !important;
+	/*
+	dominant-baseline: middle !important;
+	text-anchor: middle !important;
+	*/
+}
+
+svg polyline, svg line{
+    stroke:var(--text-color)!important;
+    stroke-width:calc( var(--border-thickness) / 2.0 )!important;
+	fill: none!important;
+}
