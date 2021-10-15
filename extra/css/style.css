@@ -430,7 +430,7 @@ th {
 
 hr{
 	border-bottom: var(--border-thickness) solid var(--text-color)!important;
-	margin: 0.5rem!important;
+	margin: 0.5rem 0.5rem 0.5rem 0!important;
 }
 
 .md-source-date {
