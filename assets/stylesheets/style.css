@@ -259,6 +259,7 @@ tr:first-child td {
 	.md-nav.md-nav--primary.md-nav--lifted.md-nav--integrated {
 		position:relative;
 	    left: 1rem!important;
+		width:90%;
 	}
 }
 
@@ -380,6 +381,10 @@ th {
 	color: var(--text-color) !important;
 	font-weight: bold;
 	border-bottom: var(--border-thickness) solid var(--text-color);
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link{
+	display: none;
 }
 
 .md-nav__title {
