@@ -61,6 +61,10 @@ blockquote,
 	font-size: var(--font-size-small) !important;
 }
 
+.footnote hr{
+	display: none;
+}
+
 .md-ellipsis,
 h1,
 h2,
