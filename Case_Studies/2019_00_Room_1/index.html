@@ -16,7 +16,7 @@
     
     
       
-        <title>🔒 2019 Room 1 - 🏝 UHO</title>
+        <title>2019 Room 1 - 🏝 UHO</title>
       
     
     
@@ -50,11 +50,11 @@
 
     
     
-  <meta property="og:title" content="🔒 2019 Room 1" />
+  <meta property="og:title" content="2019 Room 1" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.uho.co/Case_Studies/2019_00_Room_1/" />
   
-  <meta property="og:image" content="https://www.uho.co/assets/06_00_2017, Private apartment, Paris.jpg" />
+    <meta property="og:image" content="https://www.uho.co/assets/2019_HOTEL_full.jpg" />
   
 
   
@@ -79,11 +79,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#2019-room-1" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -113,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🔒 2019 Room 1
+              2019 Room 1
             
           </span>
         </div>
@@ -419,8 +414,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021_00_Foodblock/" class="md-nav__link">
-        🔒 2021 Foodblock
+      <a href="../2021_00_Food_kiosk/" class="md-nav__link">
+        2021 Food kiosk
       </a>
     </li>
   
@@ -481,11 +476,9 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        🔒 2019 Room 1
+        2019 Room 1
       </a>
       
     </li>
@@ -500,7 +493,7 @@
   
     <li class="md-nav__item">
       <a href="../2018_00_Brexit_Monument/" class="md-nav__link">
-        🔒 2018 Brexit Monument
+        2018 Brexit Monument
       </a>
     </li>
   
@@ -514,7 +507,7 @@
   
     <li class="md-nav__item">
       <a href="../2017_00_Orgues_de_Flandre/" class="md-nav__link">
-        2017 Orgues
+        2017 Orgues de Flandre
       </a>
     </li>
   
@@ -528,7 +521,7 @@
   
     <li class="md-nav__item">
       <a href="../2017_00_La_Barre/" class="md-nav__link">
-        🔒 2017 La Barre
+        2017 La Barre
       </a>
     </li>
   
@@ -1975,126 +1968,50 @@
               
                 
                 
-                <div id="mkdocs-encrypted-content" style="display:none">0VQuHa116TUh6kCFLXF7bg==;T38IRK6lYG9bsMasJYnlXDDPEenUqKp5Qhj6J/rSRoBabXJTt8U0FTowzLgeVicvhTsLsgh60+a0Mrs3NiNA0A==;^</div>
-<div id="mkdocs-decrypted-content">
-    <form id="mkdocs-decrypt-form">
-        <h1>🔒 This content will be unlocked in the future.</h1>
-        <p>Page protected with AES encryption.</p>
-        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
-        
-        <p id="mkdocs-decrypt-msg"></p>
-    </form>
-</div>
-
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-
-
-<script type="text/javascript">
-    (function() {
-        var strip_padding = function(padded_content, padding_char) {
-            /* Strips the padding character from decrypted content. */
-            for (var i = padded_content.length; i > 0; i--) {
-                if (padded_content[i - 1] !== padding_char) {
-                    return padded_content.slice(0, i);
-                }
-            }
-        };
-        var decrypt_content = function(password, iv_b64, ciphertext_b64, padding_char) {
-            /* Decrypts the content from the ciphertext bundle. */
-            var key = CryptoJS.MD5(password),
-                iv = CryptoJS.enc.Base64.parse(iv_b64),
-                ciphertext = CryptoJS.enc.Base64.parse(ciphertext_b64),
-                bundle = {
-                    key: key,
-                    iv: iv,
-                    ciphertext: ciphertext
-                };
-            var plaintext = CryptoJS.AES.decrypt(bundle, key, {
-                iv: iv,
-                padding: CryptoJS.pad.NoPadding
-            });
-            try {
-                return strip_padding(plaintext.toString(CryptoJS.enc.Utf8), padding_char);
-            } catch (err) {
-                // encoding failed; wrong password
-                return false;
-            }
-        };
-        
-        // Reload scripts src after decryption process
-        var reload_js = function(src) {
-            $('script[src="' + src + '"]').remove();
-            $('<script>').attr('src', src).appendTo('head');
-        };
-        var init_decryptor = function() {
-            var password_input = document.getElementById('mkdocs-content-password'),
-                encrypted_content = document.getElementById('mkdocs-encrypted-content'),
-                decrypted_content = document.getElementById('mkdocs-decrypted-content'),
-                decrypt_form = document.getElementById('mkdocs-decrypt-form');
-            // Adjust password field width to placeholder length
-            let input = document.getElementById("mkdocs-content-password");
-            input.setAttribute('size', input.getAttribute('placeholder').length);
-            
-            // Decrypt content
-            var decrypt_action = function() {
-                // grab the ciphertext bundle
-                var parts = encrypted_content.innerHTML.split(';');
-                // decrypt it
-                var content = decrypt_content(
-                    password_input.value,
-                    parts[0],
-                    parts[1],
-                    parts[2]
-                );
-                if (content) {
-                    // success; display the decrypted content
-                    decrypted_content.innerHTML = content;
-                    encrypted_content.parentNode.removeChild(encrypted_content);
-                    // any post processing on the decrypted content should be done here
-                    
-                    
-                    
-                } else {
-                    // create HTML element for the inform message
-                    var decrypt_msg = document.createElement('p');
-                    decrypt_msg.setAttribute('id', 'mkdocs-decrypt-msg');
-                    var node = document.createTextNode('Invalid password.');
-                    decrypt_msg.appendChild(node);
-                    var mkdocs_decrypt_msg = document.getElementById('mkdocs-decrypt-msg');
-                    // clear all previous failure messages
-                    while (mkdocs_decrypt_msg.firstChild) {
-                        mkdocs_decrypt_msg.firstChild.remove();
-                    }
-                    mkdocs_decrypt_msg.appendChild(decrypt_msg);
-                    password_input.value = '';
-                    password_input.focus();
-                }
-            };
-            
-            
-            password_input.addEventListener('keydown', function(event) {
-                if (event.key === "Enter") {
-                    
-                    event.preventDefault();
-                    decrypt_action();
-                    
-                }
-            });
-        };
-        document.addEventListener('DOMContentLoaded', init_decryptor);
-    })();
-</script>
+                  <h1>2019 Room 1</h1>
+                
+                <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Hyeres, France</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>Exhibition title</td>
+<td>Une Chambre Ailleurs</td>
+</tr>
+<tr>
+<td>Curated by</td>
+<td>Audrey Teichmann and <a href="https://www.mbl.archi/">MBL architects</a></td>
+</tr>
+<tr>
+<td>Works by</td>
+<td>Schemata Architects; NL Architects; AYR; Jack Self; OMA; SOM; BIG; Ingrid Caven; Jean Jacque Schuhl; Bertrand Bonello; Stephane Maupin; Peaks; Paule Perron; Paul Vincent; Guy Rottier; Yo Shimada; Pila Studio; Philippe Starck; Herzog &amp; De Meuron; Jean Benoit Vetillard; Salottobuono</td>
+</tr>
+<tr>
+<td>Venue</td>
+<td>Villa Noailles</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Exhibition</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="2019_HOTEL_full.jpg" src="../../assets/2019_HOTEL_full.jpg" /></p>
+<p><em>Ce n’est ni tout à fait une chambre ni tout à fait une salle de bains. Disons, un hybride entre les deux, avec une literie visiblement imperméable, autant conçue pour le dépaysement des clients que pour le confort du petit personnel de l’hôtel. Et on imagine bien, en effet, la femme de ménage entrer dans cette chambre liquide entièrement carrelée de noir, sortir le Kärcher et bombarder d’eau la pièce du sol au plafond. Optimisation du temps de travail. A ce jour, Room 1 est une chambre d’hôtel purement fictive, et tant mieux sans doute, considérant son hygiénisme caricatural et cauchemardesque qui intéresserait sans doute beaucoup les serial killers. Commandée au tandem parisien UHO Architects par la Villa Noailles de Hyères (Var), elle se présente en image 3D à la mi-temps d’«Une chambre ailleurs», une exposition dont elle résume bien l’objectif : rappeler d’une part à quel point la chambre d’hôtel fut, et continue d’être, une «machine à fantasmes», selon les mots de l’auteur Jean-Jacques Schuhl (lire ci-contre). Souligner d’autre part que, si l’on connaît bien certains des liens existentiels que les écrivains ont pu nouer avec ces espaces mi-privés mi-publics, on connaît sans doute moins la façon dont les architectes, de leurs côtés, ont pu s’en servir comme véritables laboratoires, déplaçant les cloisons amovibles qui séparent public et privé, et révélant par ce geste ce que chaque époque range derrière les mots d’hospitalité et d’intimité.</em></p>
+<p>Eve Beauvallet<br />
+Libération, 03.04.2019</p>
                 
                   
                     
@@ -2103,7 +2020,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-11-11
+      Last update: 2021-11-17
     
   </small>
 </div>
@@ -2143,13 +2060,13 @@
       
       
         
-        <a href="../2018_00_Brexit_Monument/" class="md-footer__link md-footer__link--next" aria-label="Next: 🔒 2018 Brexit Monument" rel="next">
+        <a href="../2018_00_Brexit_Monument/" class="md-footer__link md-footer__link--next" aria-label="Next: 2018 Brexit Monument" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              🔒 2018 Brexit Monument
+              2018 Brexit Monument
             </div>
           </div>
           <div class="md-footer__button md-icon">

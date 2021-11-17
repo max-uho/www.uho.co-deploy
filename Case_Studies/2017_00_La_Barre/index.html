@@ -16,7 +16,7 @@
     
     
       
-        <title>🔒 2017 La Barre - 🏝 UHO</title>
+        <title>2017 La Barre - 🏝 UHO</title>
       
     
     
@@ -50,11 +50,11 @@
 
     
     
-  <meta property="og:title" content="🔒 2017 La Barre" />
+  <meta property="og:title" content="2017 La Barre" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.uho.co/Case_Studies/2017_00_La_Barre/" />
   
-  <meta property="og:image" content="https://www.uho.co/assets/06_00_2017, Private apartment, Paris.jpg" />
+    <meta property="og:image" content="https://www.uho.co/assets/LA_BARRE_FRAC.jpg" />
   
 
   
@@ -79,11 +79,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#2017-la-barre" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -113,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🔒 2017 La Barre
+              2017 La Barre
             
           </span>
         </div>
@@ -419,8 +414,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021_00_Foodblock/" class="md-nav__link">
-        🔒 2021 Foodblock
+      <a href="../2021_00_Food_kiosk/" class="md-nav__link">
+        2021 Food kiosk
       </a>
     </li>
   
@@ -476,7 +471,7 @@
   
     <li class="md-nav__item">
       <a href="../2019_00_Room_1/" class="md-nav__link">
-        🔒 2019 Room 1
+        2019 Room 1
       </a>
     </li>
   
@@ -490,7 +485,7 @@
   
     <li class="md-nav__item">
       <a href="../2018_00_Brexit_Monument/" class="md-nav__link">
-        🔒 2018 Brexit Monument
+        2018 Brexit Monument
       </a>
     </li>
   
@@ -504,7 +499,7 @@
   
     <li class="md-nav__item">
       <a href="../2017_00_Orgues_de_Flandre/" class="md-nav__link">
-        2017 Orgues
+        2017 Orgues de Flandre
       </a>
     </li>
   
@@ -523,11 +518,9 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        🔒 2017 La Barre
+        2017 La Barre
       </a>
       
     </li>
@@ -1975,126 +1968,55 @@
               
                 
                 
-                <div id="mkdocs-encrypted-content" style="display:none">R0HqmdeFL6Jj2VsSYByZzQ==;FEEITiqM6ubwwALan3vYJMC4VG92luo37/zGpaseiZ5SbPmPOqmqzAGe7Cc4I4KXskmcG3oNiNWH+nkmqkBN8w==;^</div>
-<div id="mkdocs-decrypted-content">
-    <form id="mkdocs-decrypt-form">
-        <h1>🔒 This content will be unlocked in the future.</h1>
-        <p>Page protected with AES encryption.</p>
-        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
-        
-        <p id="mkdocs-decrypt-msg"></p>
-    </form>
-</div>
-
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
-
-
-<script type="text/javascript">
-    (function() {
-        var strip_padding = function(padded_content, padding_char) {
-            /* Strips the padding character from decrypted content. */
-            for (var i = padded_content.length; i > 0; i--) {
-                if (padded_content[i - 1] !== padding_char) {
-                    return padded_content.slice(0, i);
-                }
-            }
-        };
-        var decrypt_content = function(password, iv_b64, ciphertext_b64, padding_char) {
-            /* Decrypts the content from the ciphertext bundle. */
-            var key = CryptoJS.MD5(password),
-                iv = CryptoJS.enc.Base64.parse(iv_b64),
-                ciphertext = CryptoJS.enc.Base64.parse(ciphertext_b64),
-                bundle = {
-                    key: key,
-                    iv: iv,
-                    ciphertext: ciphertext
-                };
-            var plaintext = CryptoJS.AES.decrypt(bundle, key, {
-                iv: iv,
-                padding: CryptoJS.pad.NoPadding
-            });
-            try {
-                return strip_padding(plaintext.toString(CryptoJS.enc.Utf8), padding_char);
-            } catch (err) {
-                // encoding failed; wrong password
-                return false;
-            }
-        };
-        
-        // Reload scripts src after decryption process
-        var reload_js = function(src) {
-            $('script[src="' + src + '"]').remove();
-            $('<script>').attr('src', src).appendTo('head');
-        };
-        var init_decryptor = function() {
-            var password_input = document.getElementById('mkdocs-content-password'),
-                encrypted_content = document.getElementById('mkdocs-encrypted-content'),
-                decrypted_content = document.getElementById('mkdocs-decrypted-content'),
-                decrypt_form = document.getElementById('mkdocs-decrypt-form');
-            // Adjust password field width to placeholder length
-            let input = document.getElementById("mkdocs-content-password");
-            input.setAttribute('size', input.getAttribute('placeholder').length);
-            
-            // Decrypt content
-            var decrypt_action = function() {
-                // grab the ciphertext bundle
-                var parts = encrypted_content.innerHTML.split(';');
-                // decrypt it
-                var content = decrypt_content(
-                    password_input.value,
-                    parts[0],
-                    parts[1],
-                    parts[2]
-                );
-                if (content) {
-                    // success; display the decrypted content
-                    decrypted_content.innerHTML = content;
-                    encrypted_content.parentNode.removeChild(encrypted_content);
-                    // any post processing on the decrypted content should be done here
-                    
-                    
-                    
-                } else {
-                    // create HTML element for the inform message
-                    var decrypt_msg = document.createElement('p');
-                    decrypt_msg.setAttribute('id', 'mkdocs-decrypt-msg');
-                    var node = document.createTextNode('Invalid password.');
-                    decrypt_msg.appendChild(node);
-                    var mkdocs_decrypt_msg = document.getElementById('mkdocs-decrypt-msg');
-                    // clear all previous failure messages
-                    while (mkdocs_decrypt_msg.firstChild) {
-                        mkdocs_decrypt_msg.firstChild.remove();
-                    }
-                    mkdocs_decrypt_msg.appendChild(decrypt_msg);
-                    password_input.value = '';
-                    password_input.focus();
-                }
-            };
-            
-            
-            password_input.addEventListener('keydown', function(event) {
-                if (event.key === "Enter") {
-                    
-                    event.preventDefault();
-                    decrypt_action();
-                    
-                }
-            });
-        };
-        document.addEventListener('DOMContentLoaded', init_decryptor);
-    })();
-</script>
+                  <h1>2017 La Barre</h1>
+                
+                <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Orleans</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>Exhibition</td>
+<td>Architecture Biennale</td>
+</tr>
+<tr>
+<td>Venue</td>
+<td>FRAC-Centre</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Exhibition</td>
+</tr>
+<tr>
+<td>Team</td>
+<td>Ophélie Dozat</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Olivier Surel</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="LA_BARRE_FRAC.jpg" src="../../assets/LA_BARRE_FRAC.jpg" /></p>
+<p>## On <em>La barre</em>    </p>
+<p>The high rises of Dogma’s <em>Stop City</em> expressed a formal resistance to a neoliberal dynamic of “informal urbanization”: eight buildings, each one a constituent element of a “hyper-dense archipelago.”</p>
+<p><em>Stop City</em> was designed by Dogma as a response to Archizoom’s project <em>No Stop City</em>, which, according to Dogma, was at odds with all utopian projection, and the result of a critique of the capitalist mode of production.</p>
+<p>For Archizoom, it was a matter of offering a critical precipitate in the form of an architectural exaggeration, by way of a repetition of generic space, much of which can be attributed to the functionality of post-Fordist metropolises – functions related as much to production as to reproduction.</p>
+<p><em>Stop City</em> circumscribed, in architectural design, the critical resource of a limit imposed on neo-liberal urbanization, as well as it veered away from the humanist socialism of utopianism. In technical terms, we can say that such a project constituted a quasi-communitarian and secessionist limit to the subsumption of the social relation under Capital.</p>
+<p>Beyond <em>Stop City</em> and <em>No Stop City,</em> but in a clear critical relation with Dogma and Archizoom, Max Turnheim’s <em>La Barre</em> figures a generic development of housing projects, in a city where all manifest expression of class conflict has tendentially disappeared, and where architecture tends to become a pure externality of the city’s structuring, a city that has itself become a space of circulation for logistical and informational flows.</p>
+<p>In this simulation, <em>La Barre’s</em> architecture, inserted amongst a flow modeled according to Navier-Stokes’ equations, is depicted as a zone of active resistance of domestic space. This series, whose appearance tends towards to the diagrammatic, opens to a reflection on the discontinuity of such a space, at a level that ought to be characterized, to borrow a concept from the German-American psychologist Kurt Lewin, as the first sequence of a “hodological” rendering of the displacement of high rises in the city center, here reduced to the representation of the linear movement of the flow.</p>
+<p><em>Olivier Surel</em></p>
                 
                   
                     
@@ -2103,7 +2025,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-11-11
+      Last update: 2021-11-17
     
   </small>
 </div>
@@ -2127,7 +2049,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../2017_00_Orgues_de_Flandre/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2017 Orgues" rel="prev">
+        <a href="../2017_00_Orgues_de_Flandre/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2017 Orgues de Flandre" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2136,7 +2058,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              2017 Orgues
+              2017 Orgues de Flandre
             </div>
           </div>
         </a>
