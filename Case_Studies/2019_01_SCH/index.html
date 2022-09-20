@@ -50,7 +50,7 @@
 
     
     
-  <meta property="og:title" content="2019 Shared Country House" />
+  <meta property="og:title" content="🔒 2019 Shared Country House" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.uho.co/Case_Studies/2019_01_SCH/" />
   
@@ -520,7 +520,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        2019 Shared Country House
+        🔒 2019 Shared Country House
       </a>
       
     </li>
@@ -2052,38 +2052,126 @@
               
                 
                 
-                  <h1>2019 Shared Country House</h1>
-                
-                <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Location</td>
-<td>France</td>
-</tr>
-<tr>
-<td>Year</td>
-<td>2019</td>
-</tr>
-<tr>
-<td>Architects</td>
-<td>UHO</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>Residential</td>
-</tr>
-<tr>
-<td>Category</td>
-<td>Architecture</td>
-</tr>
-</tbody>
-</table>
+                <div id="mkdocs-encrypted-content" style="display:none">ydPlGq2gh5mqpDMyqmfhdw==;lXH0PpW56PTCZpBjbhlrxLNBQBX/K7JhmWFt/X0CTlEHD9NlbBQbR8n5z6tsGtGhrrPTsdPjjBzSAidx1OkqUxoz1V8wDoDqpoiYNaDYfgSQbaIfEMUoUsPJEGEFW5QMM/B+wPK5NTHKCMQ37ys7I10G+xnEFfxXwQG4r2agwY3XbWj6AQgWV5Bx88vZ3R1Lsl9q/N0b2wt8tSV94j7rsocFdTKK8L2oX91IWEzmwUR1mCnEmybhHwNUUplZLYQ0AVDL/boVMdR8oLS0yEOUhtHOlliCRpOj4f82FsAf6k+BVR69EY5MEaWP/9pAJBslsMZYJ1YtbTOJy33nEtXjr36t82niNBjrt/AZr+mAY9t0/2JEG1l81XCP/wTZiwRHNecZuYgN3f8diFYeleTu5CjZ6Aud+eQeeLqYuDbVHJg=;^</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>🔒 This content will be unlocked in the future.</h1>
+        <p>Page protected with AES encryption.</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+
+
+<script type="text/javascript">
+    (function() {
+        var strip_padding = function(padded_content, padding_char) {
+            /* Strips the padding character from decrypted content. */
+            for (var i = padded_content.length; i > 0; i--) {
+                if (padded_content[i - 1] !== padding_char) {
+                    return padded_content.slice(0, i);
+                }
+            }
+        };
+        var decrypt_content = function(password, iv_b64, ciphertext_b64, padding_char) {
+            /* Decrypts the content from the ciphertext bundle. */
+            var key = CryptoJS.MD5(password),
+                iv = CryptoJS.enc.Base64.parse(iv_b64),
+                ciphertext = CryptoJS.enc.Base64.parse(ciphertext_b64),
+                bundle = {
+                    key: key,
+                    iv: iv,
+                    ciphertext: ciphertext
+                };
+            var plaintext = CryptoJS.AES.decrypt(bundle, key, {
+                iv: iv,
+                padding: CryptoJS.pad.NoPadding
+            });
+            try {
+                return strip_padding(plaintext.toString(CryptoJS.enc.Utf8), padding_char);
+            } catch (err) {
+                // encoding failed; wrong password
+                return false;
+            }
+        };
+        
+        // Reload scripts src after decryption process
+        var reload_js = function(src) {
+            $('script[src="' + src + '"]').remove();
+            $('<script>').attr('src', src).appendTo('head');
+        };
+        var init_decryptor = function() {
+            var password_input = document.getElementById('mkdocs-content-password'),
+                encrypted_content = document.getElementById('mkdocs-encrypted-content'),
+                decrypted_content = document.getElementById('mkdocs-decrypted-content'),
+                decrypt_form = document.getElementById('mkdocs-decrypt-form');
+            // Adjust password field width to placeholder length
+            let input = document.getElementById("mkdocs-content-password");
+            input.setAttribute('size', input.getAttribute('placeholder').length);
+            
+            // Decrypt content
+            var decrypt_action = function() {
+                // grab the ciphertext bundle
+                var parts = encrypted_content.innerHTML.split(';');
+                // decrypt it
+                var content = decrypt_content(
+                    password_input.value,
+                    parts[0],
+                    parts[1],
+                    parts[2]
+                );
+                if (content) {
+                    // success; display the decrypted content
+                    decrypted_content.innerHTML = content;
+                    encrypted_content.parentNode.removeChild(encrypted_content);
+                    // any post processing on the decrypted content should be done here
+                    
+                    
+                    
+                } else {
+                    // create HTML element for the inform message
+                    var decrypt_msg = document.createElement('p');
+                    decrypt_msg.setAttribute('id', 'mkdocs-decrypt-msg');
+                    var node = document.createTextNode('Invalid password.');
+                    decrypt_msg.appendChild(node);
+                    var mkdocs_decrypt_msg = document.getElementById('mkdocs-decrypt-msg');
+                    // clear all previous failure messages
+                    while (mkdocs_decrypt_msg.firstChild) {
+                        mkdocs_decrypt_msg.firstChild.remove();
+                    }
+                    mkdocs_decrypt_msg.appendChild(decrypt_msg);
+                    password_input.value = '';
+                    password_input.focus();
+                }
+            };
+            
+            
+            password_input.addEventListener('keydown', function(event) {
+                if (event.key === "Enter") {
+                    
+                    event.preventDefault();
+                    decrypt_action();
+                    
+                }
+            });
+        };
+        document.addEventListener('DOMContentLoaded', init_decryptor);
+    })();
+</script>
                 
                   
                 
