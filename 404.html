@@ -1,62 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UHO</title>
-    <link rel="stylesheet" href="output.css">
-    <link rel="icon" href="fav.png">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏝️</text></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="text-6xl m-4 leading-[3rem] dark:text-white dark:bg-black">
+<body class="text-lg md:text-2xl w-full h-screen fixed">
+    <img src="img/back.jpg" class="object-cover w-full h-full fixed grayscale" alt="Flandre" />
 
-    <div class="h-full fixed top-0 flex items-center">
-        <div class="flex-row">
-        <img class=" lg:w-96 my-5 rounded-sm shadow-xl shadow-slate-600 dark:shadow-slate-900" src="Use_of_Space.png">
-        </div>
-        <p class="ps-5 flew-row text-2xl max-w-fit drop-shadow-md"><i>The Use of Space</i> is available for 15€ from December 13th 2023 in all participating bookshops. It contains both English and French versions of the text.</p>
+    <div class="p-4 fixed">
+        <p class="mb-4 p-2 max-w-[800px]">
+            <span class="bg-base-100">
+                <i>UHO</i> is an architecture studio. It ranges from theory to construction in scope and from
+                architectural to urban in scale. Projects include housing, schools and public space.<br>
+            </span>
+        </p>
 
+        <p class="mb-4 p-2 max-w-[800px]">
+            <span class="bg-base-100">
+                <i>UHO</i> has been involved in teaching since its inception (AA, ÉNSAPM, ÉSA, KIT Karlsruhe,
+                Politecnico di Torino…) and its intuitions are synthesised in a book: <i>The Use of Space</i>.
+            </span>
+        </p>
+
+        <p class="mb-4 p-2">
+            <span class="bg-base-100">
+                <a class="underline" href="mailto:inquiries@uho.co">inquiries@uho.co</a>
+            </span>
+        </p>
+
+        <p class="mb-4 p-2">
+            <span class="bg-base-100">
+                17 rue Mathis<br>
+                F - 75019 Paris<br>
+            </span>
+        </p>
+
+        <p class="mb-4 p-2">
+            <span class="bg-base-100">
+                Participation in all works in the given period:<br>
+                Federico Coricelli (2016 - 2022)<br>
+                Adrien Durrmeyer (2013 - 2016)<br>
+                Martin Le Bourgeois (2013 - 2014)<br>
+                Max Turnheim (2007 - present)<br>
+            </span>
+        </p>
     </div>
-    
-    <div class="fixed top-5">
-    <h1>UHO</h1>
-    <a href="https://www.instagram.com/uho_co/" target="_blank" class="hover:underline block">NEWS<span class="text-sm">Instagram</span></a>
-    <a href="#" class="line-through">WORKS<span class="text-sm">PDF available soon.</span></a>
-    </div>
-
-    
-
-
-    
-    
-    <div id="dateInfo" class="text-sm fixed bottom-2 ">
-        <span class="shadow-red-600 dark:shadow-slate-700">© UHO <span id="currentMonth"></span>. <span id="currentYear"></span> • <a href="mailto:inquiries@uho.co" class="hover:underline">inquiries@uho.co</a> • 17 rue Mathis F - 75019 Paris</span>
-    </div>
-
-
-
-
-    <script>
-        function getCurrentMonthAndYear() {
-            const today = new Date();
-            let month = today.toLocaleString('default', { month: 'short' }); // getMonth() returns 0-11, so add 1 to get 1-12
-            //month = month.toString().padStart(2, '0'); // Pad the month with a leading zero if it's a single digit
-            const year = today.getFullYear();
-            return { month, year };
-        }
-
-        // Get the current month and year
-        const { month, year } = getCurrentMonthAndYear();
-
-        // Find the span elements and set their content
-        document.getElementById('currentMonth').textContent = `${month}`;
-        document.getElementById('currentYear').textContent = `${year}`;
-
-
-    </script>
 </body>
 
 </html>
