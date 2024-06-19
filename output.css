@@ -870,6 +870,10 @@ html {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -898,8 +902,16 @@ html {
   height: 100%;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .max-w-64 {
@@ -918,6 +930,10 @@ html {
   max-width: 800px;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -926,6 +942,14 @@ html {
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.bg-\[url\(\'img\/back\.jpg\'\)\] {
+  background-image: url('img/back.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .object-cover {
